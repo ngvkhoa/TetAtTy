@@ -26,22 +26,26 @@
             height: 100vh;
             text-align: center;
             position: relative;
+            overflow: hidden; /* Để tránh cuộn trang */
         }
         h1 {
-            font-size: 4.2rem;
-            margin-top: 40px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            color: #FFD700; /* Màu vàng cho tiêu đề */
-            font-family: 'MuseoModerno', sans-serif; /* Font cho tiêu đề */
+        font-size: 4.2rem;
+        margin-top: 40px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        color: #FFD700; /* Màu vàng cho tiêu đề */
+        font-family: 'MuseoModerno', sans-serif; /* Font cho tiêu đề */
+        z-index: 10; /* Đảm bảo tiêu đề ở trên */
         }
+
         .message {
             font-size: 1.8rem;
             margin-top: 20px;
             color: white; /* Màu trắng cho các lời chúc */
             font-family: 'Playwrite IN', sans-serif; /* Font Playwrite IN cho lời chúc */
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            z-index: 10; /* Đảm bảo lời chúc ở trên */
         }
 
         img {
@@ -61,7 +65,7 @@
             justify-content: center;
             align-items: center;
             font-size: 2rem;
-            z-index: 10;
+            z-index: 12;
         }
 
 /* Đảm bảo hình ảnh luôn ở đúng vị trí */
@@ -69,7 +73,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%); /* Đưa hình ảnh vào giữa chiều dọc */
-            width: 30%; /* Điều chỉnh kích thước hình ảnh cho màn hình nhỏ */
+            width: 11%; /* Điều chỉnh kích thước hình ảnh cho màn hình nhỏ */
+            z-index: 1; /* Đảm bảo hình ảnh câu đối ở dưới */
         }
 
         .tet-left {
@@ -83,14 +88,14 @@
         /* Nếu màn hình cực kỳ nhỏ (dưới 400px) */
         @media (max-width: 400px) {
             .tet {
-                width: 70%; /* Giảm kích thước cho màn hình rất nhỏ */
+                width: 35%; /* Giảm kích thước cho màn hình rất nhỏ */
             }
         }
         
         /* Nếu màn hình nhỏ (dưới 480px) */
         @media (max-width: 480px) {
             .tet {
-                width: 50%; /* Điều chỉnh kích thước cho màn hình nhỏ */
+                width: 45%; /* Điều chỉnh kích thước cho màn hình nhỏ */
             }
         }
             
@@ -132,8 +137,9 @@
 
         <!-- Câu đối di chuyển từ bên trái và bên phải -->
         <img class="tet tet-left" src="https://1.bp.blogspot.com/-jnoHkZl5_AM/YBgnvWeDMmI/AAAAAAAADy0/R-kqgeeWA5YxmPoN7oZWG4SQeyHYtSoQACLcBGAsYHQ/s522/caudoitet1.webp" />
+        <z-index: 1;>
         <img class="tet tet-right" src="https://1.bp.blogspot.com/-l49qL0RM4Qg/YBgnvdfRExI/AAAAAAAADyw/o0av3DGxSfY7jrzMHxoTuoC1u8FPSYlCgCLcBGAsYHQ/s522/caudoitet2.webp" />
-
+        </z-index: 1;>
         <!-- Canvas cho hiệu ứng pháo hoa -->
         <canvas id="canvas">Canvas is not supported in your browser.</canvas>
     </div>
