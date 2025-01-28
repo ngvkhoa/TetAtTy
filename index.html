@@ -66,32 +66,25 @@
 
 /* Đảm bảo hình ảnh luôn ở đúng vị trí */
         .tet {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%); /* Đưa hình ảnh vào giữa chiều dọc */
-                    width: 15%; /* Điều chỉnh kích thước hình ảnh */
-                }
-
-                .tet-left {
-                    left: 0;
-                }
-
-                .tet-right {
-                    right: 0;
-                }
-
-                /* Đảm bảo rằng hình ảnh không bị mất khi thu nhỏ màn hình */
-                @media (max-width: 400px) {
-                    .tet {
-                        width: 100%; /* Điều chỉnh kích thước hình ảnh cho màn hình nhỏ */
-                    }
-                }
-
-                @media (max-width: 480px) {
-                    .tet {
-                        width: 45%; /* Điều chỉnh kích thước hình ảnh cho màn hình rất nhỏ */
-                    }
-                }
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%); /* Đưa hình ảnh vào giữa chiều dọc */
+            width: 30%; /* Điều chỉnh kích thước hình ảnh cho màn hình nhỏ */
+        }
+        
+        /* Nếu màn hình cực kỳ nhỏ (dưới 400px) */
+        @media (max-width: 400px) {
+            .tet {
+                width: 70%; /* Giảm kích thước cho màn hình rất nhỏ */
+            }
+        }
+        
+        /* Nếu màn hình nhỏ (dưới 480px) */
+        @media (max-width: 480px) {
+            .tet {
+                width: 50%; /* Điều chỉnh kích thước cho màn hình nhỏ */
+            }
+        }
             
 
         canvas {
@@ -107,7 +100,7 @@
             position: absolute;
             bottom: 20px;
             right: 20px;
-            font-size: 1rem;
+            font-size: 2rem;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             font-family: 'Vazir', sans-serif;
@@ -126,7 +119,7 @@
     <div class="container">
         <h1>Chúc Mừng Xuân Ất Tỵ 2025</h1>
         <div class="message">
-            <p>Kính chúc một năm mới thật nhiều may mắn, bình an, an khang, thịnh vượng và tràn ngập niềm vui bên gia đình và những người thân yêu.</p>
+            <p>Kính chúc mọi người một năm mới thật nhiều may mắn, bình an và tràn ngập niềm vui bên gia đình và những người thân yêu <3</p>
         </div>
 
         <!-- Câu đối di chuyển từ bên trái và bên phải -->
